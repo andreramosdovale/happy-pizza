@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+:root {
+  --cheese: #f7c946;
+  --crust: #d19952;
+  --peperoni: #a2371d;
+  --olive: #1d1d1d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background: #eff0ea;
+}
+
+body {
+  font-family: "Lobster";
+}
+
+p {
+  font-family: Lobster;
+  margin-top: 2vh;
+  text-transform: capitalize;
+  font-size: 50px;
+  text-align: center;
+  color: rgb(255, 113, 113);
+  font-weight: 600;
+  text-shadow: 1px 1px black;
+}
+
+.main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.pizza {
+  position: absolute;
+  left: -160px;
+  bottom: -180px;
+  height: 400px;
+  width: 350px;
+  background: var(--cheese);
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  z-index: 1;
+}
+
+.crust {
+  position: absolute;
+  height: 25px;
+  width: 350px;
+  border-radius: 180px 180px 0 0;
+  background: var(--crust);
+  bottom: 220px;
+  left: -160px;
+  z-index: 0;
+}
+
+.peperoni {
+  background: var(--peperoni);
+  border-radius: 100%;
+  z-index: 2;
+}
+
+.p1 {
+  position: absolute;
+  top: 5px;
+  left: 300px;
+  width: 60px;
+  height: 60px;
+}
+
+.p2 {
+  position: absolute;
+  top: 250px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+}
+
+.p3 {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+.p4 {
+  position: absolute;
+  top: 55px;
+  left: 190px;
+  width: 80px;
+  height: 80px;
+}
+
+.pizza-face {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: 3px solid transparent;
+  border-top: 5px solid black;
+  border-radius: 65px;
+  top: -50px;
+  left: -40px;
+  z-index: 3;
+}
+.pizza-face::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: 3px solid transparent;
+  border-top: 5px solid black;
+  border-radius: 65px;
+  top: -5px;
+  left: 60px;
+  z-index: 3;
+}
+.pizza-face::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-bottom: 5px solid black;
+  border-radius: 65px;
+  top: -15px;
+  left: 45px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.blush {
+  position: absolute;
+  top: -25px;
+  left: -70px;
+  width: 30px;
+  height: 15px;
+  background: #d9594c;
+  border-radius: 100%;
+  opacity: 0.5;
+  z-index: 2;
+}
+.blush:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  width: 30px;
+  height: 15px;
+  background: #d9594c;
+  border-radius: 100%;
+  z-index: 3;
+}
